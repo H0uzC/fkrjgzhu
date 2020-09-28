@@ -40,9 +40,9 @@ DO **NOT** USE `ROOT USER` TO CONFIGURE OR MAKE!!!
 DO **NOT** USE `ROOT USER` TO CONFIGURE OR MAKE!!!
 DO **NOT** USE `ROOT USER` TO CONFIGURE OR MAKE!!!
 
-1. Prepare your compilation environment
+**1. Prepare your compilation environment**
 
-2. Download the required packages
+**2. Download the required packages**
 ```bash
 cd ~ # or the PATH you want in /home/
 
@@ -53,14 +53,14 @@ sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git
 
 **DO NOT USE `sudo` or `root user` IN THE FOLLOWING STEPS**
 
-3. Get the source code of `Openwrt` from github
+**3. Get the source code of `Openwrt` from github**
 
 ```bash
 git clone https://github.com/coolsnowwolf/lede
 ```
 
 
-4. Enter the file directory of `lede` and get all the latest package definitions and install symlinks of all of them
+**4. Enter the file directory of `lede` and get all the latest package definitions and install symlinks of all of them**
 
 
 NOTE: If you would like to use some plug-ins such as `S*R-PLUS`, you should uncomment the line with the word `helloword` (the last line usually) before running `./scripts/feeds update -a`
@@ -72,7 +72,7 @@ cd ./lede/
 ```
 
 
-5. Integrate the the source code of `Mnieap` & `Luci-Minieap` into `Openwrt`
+**5. Integrate the the source code of `Mnieap` & `Luci-Minieap` into `Openwrt`**
 
 ```bash
 git clone https://github.com/ysc3839/openwrt-minieap.git -b gzhu package/minieap
@@ -80,7 +80,7 @@ git clone https://github.com/ysc3839/luci-proto-minieap.git package/luci-proto-m
 ```
 NOTE：Notice the `gzhu` branch
 
-6. Configure and Choose the packages you want
+**6. Configure and Choose the packages you want**
 
 ```bash
 make menuconfig
@@ -94,7 +94,7 @@ make menuconfig
 [More information for the other packages](https://www.right.com.cn/forum/thread-344825-1-1.html)
 
 
-7. Dowload some required library
+**7. Dowload some required library**
 *(Run with bypassing GFW globally)*
 
 ```bash
@@ -102,7 +102,7 @@ make -j8 download V=s
 ```
 
 
-8. Compile
+**8. Compile**
 *(Run with bypassing GFW globally)*
 
 ```bash
@@ -110,8 +110,9 @@ make -j1 V=s # `-j1` single thread is recommended for the first compilation
 ```
 *Usually takes 2 ~ 3 hours to compile for the first time*
 
-9. Wait then Find your firmware and packages in `$YOURPATH(~ as default)/lede/bin/targets`
+**9. Wait then Find your firmware and packages in `$YOURPATH(~ as default)/lede/bin/targets`**
 
+***
 
 ## Usage
 
@@ -125,21 +126,23 @@ make -j1 V=s # `-j1` single thread is recommended for the first compilation
 1. Click `Network`->`Interface`->`LAN` to change the default IP address for logging in Openwrt (192.168.1.1 as default)
 
 
-2. Make sure `WAN` runs `DHCP` protocol 
-Create a new interface with name `$whateveruwant` 
-Click and modify the new interface you create
+2. Make sure `WAN` runs `DHCP` protocol    
+Create a new interface with name `$whateveruwant`  
+Click and modify the new interface you create  
 
 
-3. Switch to `MINIEAP` client 
-Type in your account and password (same as ruijie client) and choose `rjv3` in `Packages plug-in`
-Click `RJv3 plug-in setting`
-Choose `Ruijie private` and `Twice certification` in `EAP Broadcast Address` and `DHCP Mode`
-Click `Physical settings`
-Choose the `VLAN` that runs `DHCP` (eth0.2 as default)
+3. Switch to `MINIEAP` client  
+Type in your account and password (same as ruijie client) and choose `rjv3` in `Packages plug-in`  
+Click `RJv3 plug-in setting`  
+Choose `Ruijie private` and `Twice certification` in `EAP Broadcast Address` and `DHCP Mode`  
+Click `Physical settings`  
+Choose the `VLAN` that runs `DHCP` (eth0.2 as default)  
 
 
 4. Save and Apply
-Test the Internet
+
+
+5. Test the Internet
 
 
 ## Supplement
