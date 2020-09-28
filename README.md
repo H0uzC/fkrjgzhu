@@ -11,6 +11,8 @@ Bypass Ruijie v6.84 based on Openwrt
 
 [Usage](#usage)
 
+[Supplement](#supplement)
+
 
 ## Preparation
 
@@ -63,7 +65,7 @@ git clone https://github.com/coolsnowwolf/lede
 **4. Enter the file directory of `lede` and get all the latest package definitions and install symlinks of all of them**
 
 
-NOTE: If you would like to use some plug-ins such as `S*R-PLUS`, you should uncomment the line with the word `helloword` (the last line usually) before running `./scripts/feeds update -a`
+**NOTE:** If you would like to use some plug-ins such as `S*R-PLUS`, you should edit the file `feeds.conf.default / feeds.conf` and uncomment the line with the word `helloword` (the last line usually) before running `./scripts/feeds update -a`
 
 ```bash
 cd ./lede/
@@ -78,7 +80,7 @@ cd ./lede/
 git clone https://github.com/ysc3839/openwrt-minieap.git -b gzhu package/minieap
 git clone https://github.com/ysc3839/luci-proto-minieap.git package/luci-proto-minieap
 ```
-NOTE：Notice the `gzhu` branch
+**NOTE:** Notice the `gzhu` branch
 
 **6. Configure and Choose the packages you want**
 
