@@ -1,7 +1,7 @@
 # RuiJie-gzhu
 Bypass Ruijie v6.84 based on Openwrt
 
-**Great Appreciation for [ysc3839](https://github.com/ysc3839) and [Lean](https://github.com/coolsnowwolf)**
+**Great Appreciation for [ysc3839]https://github.com/ysc3839/openwrt-minieap/tree/gzhu) and [Lean](https://github.com/coolsnowwolf/lede)**
 
 ***
 
@@ -16,16 +16,16 @@ Bypass Ruijie v6.84 based on Openwrt
 
 ## Preparation
 
-+ `A router that can be flashed and run Openwrt`
++ `A router that can be flashed and run Openwrt`  
 
 
-+ `Ubuntu 64bit (Ubuntu 18 LTS x64 recommend)`
++ `Ubuntu 64bit (Ubuntu 18 LTS x64 recommend)`  
 
 
-+ `Conditions to bypass GFW globally`
++ `Conditions to bypass GFW globally`  
 
 
-+ If you use `VMware Workstation Pro` to build, please make sure it has at least **50GB** of storage space *(20GB as default)*
++ If you use `VMware Workstation Pro` to build, please make sure it has at least **50GB** of storage space *(20GB as default)*  
 
 
 **My Compiling Environment**
@@ -33,14 +33,10 @@ Bypass Ruijie v6.84 based on Openwrt
 `Ver: 16.0.0 build-16894299`
 
 + Ubuntu image
-`ubuntu-18.04.5-desktop-amd64`
+`Ver: 18.04.5`
 
 ***
 ## Build
-
-DO **NOT** USE `ROOT USER` TO CONFIGURE OR MAKE!!!  
-DO **NOT** USE `ROOT USER` TO CONFIGURE OR MAKE!!!  
-DO **NOT** USE `ROOT USER` TO CONFIGURE OR MAKE!!!  
 
 **1. Prepare your compilation environment**
 
@@ -52,10 +48,19 @@ sudo apt-get update
 
 sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3.5 python2.7 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf wget swig rsync
 ```
+<br>
 
-**DO NOT USE `sudo` or `Root User` IN THE FOLLOWING STEPS**
+---
 
-**3. Get the source code of `Openwrt` from github**
+**DO NOT USE `sudo` or `root` USER IN THE FOLLOWING STEPS**  
+**DO NOT USE `sudo` or `root` USER IN THE FOLLOWING STEPS**  
+**DO NOT USE `sudo` or `root` USER IN THE FOLLOWING STEPS**  
+
+---
+
+<br>
+
+**3. Get the source code of `Openwrt`**
 
 ```bash
 git clone https://github.com/coolsnowwolf/lede
@@ -65,7 +70,7 @@ git clone https://github.com/coolsnowwolf/lede
 **4. Enter the file directory of `lede` and get all the latest package definitions and install symlinks of all of them**
 
 
-**NOTE:** If you would like to use some plug-ins such as `S*R-PLUS`, you should edit the file `feeds.conf.default / feeds.conf` and uncomment the line with the word `helloword` (the last line usually) before running `./scripts/feeds update -a`
+**NOTE:** If you would like to use some plug-ins such as `S*R-PLUS`, you should edit the file `feeds.conf.default` or `feeds.conf` and uncomment the line with the word `helloword` (the last line usually) before running `./scripts/feeds update -a`
 
 ```bash
 cd ./lede/
@@ -74,15 +79,15 @@ cd ./lede/
 ```
 
 
-**5. Integrate the source code of `Mnieap` & `Luci-Minieap` into `Openwrt`**
+**5. Integrate the source code of `Mnieap` && `Luci-Minieap` into `Openwrt`**
 
 ```bash
 git clone https://github.com/ysc3839/openwrt-minieap.git -b gzhu package/minieap
 git clone https://github.com/ysc3839/luci-proto-minieap.git package/luci-proto-minieap
 ```
-**NOTE:** Notice the `gzhu` branch
+**NOTE:** Pay attention to the `gzhu` branch
 
-**6. Configure and Choose the packages you want**
+**6. Configure and Choose the packages that you want**
 
 ```bash
 make menuconfig
@@ -90,10 +95,10 @@ make menuconfig
 
 
 **NOTE:** 
-+ Choose the correct `Target System`,`Subtarget` and `Target Profile` for your router 
-+ In order to bypass the Ruijie, you should choose `minieap` in section `Network` and `luci-proto-minieap` in section `LuCI` -> `Protocols`
++ Choose **the correct** `Target System`,`Subtarget` and `Target Profile` for your router  
++ In order to bypass the Ruijie, you should choose `minieap` in section `Network` and `luci-proto-minieap` in section `LuCI` -> `Protocols`  
 
-[More information for the other packages](https://www.right.com.cn/forum/thread-344825-1-1.html)
+    [More information for the other packages](https://www.right.com.cn/forum/thread-344825-1-1.html)
 
 
 **7. Dowload some required library**  
@@ -108,11 +113,11 @@ make -j8 download V=s
 *(Run with bypassing GFW globally)*
 
 ```bash
-make -j1 V=s # `-j1` single thread is recommended for the first compilation
+make -j1 V=s    # -j1 single thread is recommended for the first compilation
 ```
 *Usually takes 2 ~ 3 hours to compile for the first time*
 
-**9. Wait then Find your firmware and packages in `$YOURPATH(~ as default)/lede/bin/targets`**
+**9. Wait then Find your firmware and packages in `$YOURPATH(~ as default)/lede/bin/targets` and `$YOURPATH(~ as default)/lede/bin/packages`**
 
 ***
 
@@ -150,7 +155,7 @@ Choose the `VLAN` that runs `DHCP` (eth0.2 as default)
 ## Supplement
 
 
-+ Compile not the first time
++ Recompile  
 
 ```bash
 cd lede
@@ -162,7 +167,7 @@ make -j$(($(nproc) + 1)) V=s
 ```
 
 
-+ remake menuconfig
++ Remake Menuconfig
 
 ```bash
 rm -rf ./tmp && rm -rf .config
