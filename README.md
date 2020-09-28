@@ -29,10 +29,10 @@ Bypass Ruijie v6.84 based on Openwrt
 
 
 **My Compiling Environment**
-+ VMware Workstation 16 Pro 
++ VMware Workstation 16 Pro  
 `Ver: 16.0.0 build-16894299`
 
-+ Ubuntu image
++ Ubuntu image  
 `Ver: 18.04.5`
 
 ***
@@ -79,7 +79,7 @@ cd ./lede/
 ```
 
 
-**5. Integrate the source code of `Mnieap` && `Luci-Minieap` into `Openwrt`**
+**5. Integrate the source code of `Minieap` && `Luci-Minieap` into `Openwrt`**
 
 ```bash
 git clone https://github.com/ysc3839/openwrt-minieap.git -b gzhu package/minieap
@@ -134,22 +134,22 @@ make -j1 V=s    # -j1 single thread is recommended for the first compilation
 
 
 2. Make sure `WAN` runs `DHCP` protocol    
-Create a new interface with name `$whateveruwant`  
+Create a new interface with the name `$whateveruwant`  
 Click and modify the new interface you create  
 
 
-3. Switch to `MINIEAP client`  
-Type in your account and password (same as ruijie client) and choose `rjv3` in `Packages plug-in`  
-Click `RJv3 plug-in setting`  
-Choose `Ruijie private` and `Twice certification` in `EAP Broadcast Address` and `DHCP Mode`  
-Click `Physical settings`  
-Choose the `VLAN` that runs `DHCP` (eth0.2 as default)  
+3. Switch to `MINIEAP Client`  
+Type in your account and password (same as ruijie client) and choose `rjv3` in `Packages Plug-in`  
+Click `RJv3 plug-in Setting`  
+Choose `Ruijie Private` and `Twice Certification` in `EAP Broadcast Address` and `DHCP Mode`  
+Click `Physical Settings`  
+Choose the `VLAN` that runs `DHCP` *(eth0.2 as default)* 
 
 
 4. Save and Apply
 
 
-5. Test the Internet
+5. [Click here to test the Internet](https://github.com/H0uzC)
 
 
 ## Supplement
