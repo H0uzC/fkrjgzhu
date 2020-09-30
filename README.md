@@ -13,6 +13,7 @@ Bypass Ruijie v6.84 based on Openwrt
 
 [Supplement](#supplement)
 
+***
 
 ## Preparation
 
@@ -70,7 +71,23 @@ git clone https://github.com/coolsnowwolf/lede
 **4. Enter the file directory of `lede` and get all the latest package definitions and install symlinks of all of them**
 
 
-**NOTE:** If you would like to use some plug-ins such as `S*R-PLUS`, you should edit the file `feeds.conf.default` or `feeds.conf` and uncomment the line with the word `helloword` (the last line usually) before running `./scripts/feeds update -a`
+**NOTE:** If you would like to use some plug-ins such as `S*R-PLUS`, you should edit the file `feeds.conf.default` or `feeds.conf` and uncomment the line with the word `helloword` (the last line usually) before running `./scripts/feeds update -a`  
+
+```diff
+src-git packages https://github.com/coolsnowwolf/packages
+src-git luci https://github.com/coolsnowwolf/luci
+src-git routing https://git.openwrt.org/feed/routing.git
+src-git telephony https://git.openwrt.org/feed/telephony.git
+src-git freifunk https://github.com/freifunk/openwrt-packages.git
+#src-git video https://github.com/openwrt/video.git
+#src-git targets https://github.com/openwrt/targets.git
+#src-git management https://github.com/openwrt-management/packages.git
+#src-git oldpackages http://git.openwrt.org/packages.git
+#src-link custom /usr/src/openwrt/custom-feed
+- #src-git helloworld https://github.com/fw876/helloworld
++ src-git helloworld https://github.com/fw876/helloworld
+```
+*The **one** step **above here** is optional*
 
 ```bash
 cd ./lede/
@@ -141,7 +158,7 @@ Click and modify the new interface you create
 3. Switch to `MINIEAP Client`  
 Type in your account and password (same as ruijie client) and choose `rjv3` in `Packages Plug-in`  
 Click `RJv3 plug-in Setting`  
-Choose `Ruijie Private` and `Twice Certification` in `EAP Broadcast Address` and `DHCP Mode`  
+Choose `Ruijie Private` in `EAP Broadcast Address` and `Twice Certification` in `DHCP Mode`  
 Click `Physical Settings`  
 Choose the `VLAN` that runs `DHCP` *(eth0.2 as default)* 
 
@@ -149,7 +166,7 @@ Choose the `VLAN` that runs `DHCP` *(eth0.2 as default)*
 4. Save and Apply
 
 
-5. [Click here to test the Internet](https://github.com/H0uzC)
+5. Click [Here](https://github.com/H0uzC) to test the Internet
 
 
 ## Supplement
@@ -176,6 +193,6 @@ make -j$(($(nproc) + 1)) V=s
 ```
 
 
-+ Mentohust Config Provided by [lomoyi](https://github.com/lomoyi)
++ `MentoHUST` Config Provided by [lomoyi](https://github.com/lomoyi)
 
 ![](./mentohustconfig.png)
