@@ -88,7 +88,7 @@ src-git freifunk https://github.com/freifunk/openwrt-packages.git
 - #src-git helloworld https://github.com/fw876/helloworld
 + src-git helloworld https://github.com/fw876/helloworld
 ```
-*取消注释部分👆为选做，如果你不知道这是什么*
+*取消注释部分👆为选做，如果你不知道这是什么*  
 *请直接忽略并执行👇*
 
 ```bash
@@ -158,11 +158,11 @@ make -j1 V=s    # -j1 single thread is recommended for the first compilation
 
 3. 修改你新建的接口  
    接口协议选择 `MINIEAP Client`  
-   输入你的校园网账号和密码并且在 `Packages Plug-in`中选择 `rjv3` 
+   输入你的校园网账号和密码并且在 `Packages Plug-in`中选择 `rjv3`  
    点击`RJv3 plug-in Setting`  
-   在 `EAP Broadcast Address`中选择 `Ruijie Private`
-   在 `DHCP Mode` 中选择`Twice Certification`
-   点击`Physical Settings`并选择运行着`DHCP`的`VLAN` *(一般是 eth0.2)* 
+   在 `EAP Broadcast Address`中选择 `Ruijie Private`  
+   在 `DHCP Mode` 中选择`Twice Certification`  
+   点击`Physical Settings`并选择运行着`DHCP`的`VLAN` *(一般是 eth0.2)*  
 
 
 4. 保存并应用
