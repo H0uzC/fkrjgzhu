@@ -205,4 +205,4 @@ make -j$(($(nproc) + 1)) V=s
 
 推荐使用 **P3TERX** 的 [Actions-Openwrt](https://github.com/P3TERX/Actions-OpenWrt) 进行线上自动编译
 
-**为了实现绕过锐捷验证**，请参照本文`编译`部分的**第五步**并结合`Actions-Openwrt`中的**添加额外的软件包**来编译固件
+**为了实现绕过锐捷验证**，请参照本文`编译`部分的`第五步`并结合`Actions-Openwrt`中的`添加额外的软件包`来编译固件
