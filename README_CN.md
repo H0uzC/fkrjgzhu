@@ -13,7 +13,8 @@
 
 **[补充](#补充)**
 
-**[不想/无法准备本地编译环境](#如果你不想/无法准备本地编译环境)**
+**[不想或无法准备本地编译环境](#如果你不想或无法准备本地编译环境)**
+
 ***
 
 ## 准备本地编译环境
@@ -198,8 +199,10 @@ make -j$(($(nproc) + 1)) V=s
 
 ![](./mentohustconfig.png)
 
-## 如果你不想/无法准备本地编译环境
+***
 
-推荐使用 **P3TERX** 的 [Actions-Openwrt](https://github.com/P3TERX/Actions-OpenWrt) 进行线上编译
+## 如果你不想或无法准备本地编译环境
+
+推荐使用 **P3TERX** 的 [Actions-Openwrt](https://github.com/P3TERX/Actions-OpenWrt) 进行线上自动编译
 
 **为了实现绕过锐捷验证**，请参照本文`编译`部分的**第五步**并结合`Actions-Openwrt`中的**添加额外的软件包**来编译固件
