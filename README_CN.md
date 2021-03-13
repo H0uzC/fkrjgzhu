@@ -199,10 +199,15 @@ make -j$(($(nproc) + 1)) V=s
 
 ![](./mentohustconfig.png)
 
+
++ 如果你已经有一台运行着Openwrt的路由器，实现绕过锐捷认证的功能只需安装minieap相关的IPK包即可，可参照 [此文](https://github.com/ysc3839/openwrt-minieap/tree/gzhu) 编译出IPK包  
+
+
++ `Releases` 已有支持MT7621系列CPU（如NEWIFI D2）和RedmiAC2100的固件  
 ***
 
 ## 如果你不想或无法准备本地编译环境
 
 推荐使用 **P3TERX** 的 [Actions-Openwrt](https://github.com/P3TERX/Actions-OpenWrt) 进行线上自动编译
 
-**为了实现绕过锐捷验证**，请参照本文`编译`部分的`第五步`并结合`Actions-Openwrt`中的`添加额外的软件包`来编译固件
+**为了实现绕过锐捷验证的功能**，请参照本文`编译`部分的`第五步`并结合`Actions-Openwrt`中的`添加额外的软件包`来编译固件
