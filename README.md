@@ -3,7 +3,7 @@ Bypass Ruijie v6.84 based on Openwrt
 
 **Great Appreciation for [ysc3839](https://github.com/ysc3839/openwrt-minieap/tree/gzhu) and [Lean](https://github.com/coolsnowwolf/lede)**
 
-**[中文文档](./README_CN.md)**
+**[中文文档](./README_zh.md)**
 
 ***
 
