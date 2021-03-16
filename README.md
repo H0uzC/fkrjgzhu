@@ -73,7 +73,7 @@ git clone https://github.com/coolsnowwolf/lede
 **4. Enter the file directory of `lede` and get all the latest package definitions and install symlinks of all of them**
 
 
-**NOTE:** If you would like to use some plug-ins such as `S*R-PLUS`, you should edit the file `feeds.conf.default` or `feeds.conf` and uncomment the line with the word `helloword` (the last line usually) before running `./scripts/feeds update -a`  
+**NOTE:** If you would like to use some plug-ins such as `S*R-PLUS` , you should edit the file `feeds.conf.default` or `feeds.conf` and uncomment the line with the word `helloword` (the last line usually) before running `./scripts/feeds update -a`  
 
 ```diff
 src-git packages https://github.com/coolsnowwolf/packages
@@ -114,7 +114,7 @@ make menuconfig
 
 
 **NOTE:** 
-+ Choose **the correct** `Target System`,`Subtarget` and `Target Profile` for your router  
++ Choose **the correct** `Target System` , `Subtarget` and `Target Profile` for your router  
 + In order to bypass the Ruijie, you should choose `minieap` in section `Network` and `luci-proto-minieap` in section `LuCI` -> `Protocols`  
 
     [More information for the other packages](https://www.right.com.cn/forum/thread-344825-1-1.html)
@@ -149,7 +149,7 @@ make -j1 V=s    # -j1 single thread is recommended for the first compilation
 
 #### Configure the Openwrt and Minieap
 
-1. Click `Network`->`Interface`->`LAN` to change the default IP address for logging in Openwrt (192.168.1.1 as default)
+1. Click `Network` -> `Interface` -> `LAN` to change the default IP address for logging in Openwrt (192.168.1.1 as default)
 
 
 2. Make sure `WAN` runs `DHCP` protocol    
