@@ -7,13 +7,13 @@ Bypass Ruijie v6.84 based on Openwrt
 
 ***
 
-[Preparation](#preparation)
++ [Preparation](#preparation)
 
-[Build](#build)
++ [Build](#build)
 
-[Usage](#usage)
++ [Usage](#usage)
 
-[Supplement](#supplement)
++ [Supplement](#supplement)
 
 ***
 
