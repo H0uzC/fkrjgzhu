@@ -1,4 +1,4 @@
-# RuiJie-gzhu
+# RuiJie-gzhu (2021-04-03后失效)
 基于Openwrt固件的绕过锐捷 v6.84验证教程
 
 **特别感谢： [ysc3839](https://github.com/ysc3839/openwrt-minieap/tree/gzhu) , [Lean](https://github.com/coolsnowwolf/lede)**
